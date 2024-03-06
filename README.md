@@ -22,15 +22,25 @@ En general, este proyecto demuestra el potencial de los sistemas de recomendaci√
 # C√≥digo:
 
 import gzip
+
 import json
+
 import pandas as pd
+
 from fastapi import FastAPI
+
 from pydantic import BaseModel
+
 from typing import List, Dict, Tuple, List
+
 from collections import Counter
+
 from sklearn.metrics.pairwise import cosine_similarity
+
 from sklearn.feature_extraction.text import TfidfVectorizer
+
 from surprise import Dataset, Reader, KNNWithMeans
+
 from surprise.model_selection import cross_validate
 
 app = FastAPI()
